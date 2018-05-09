@@ -8,7 +8,7 @@ package eu.b24u;
  * @author Jakub
  *
  */
-public class Main extends MojaAplikacja {
+public class Main extends MinecraftAplikacja {
 
 
 
