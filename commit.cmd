@@ -12,7 +12,7 @@ echo git path: %git_app%
 echo mvn path: %mvn_app%
 
 cd /d %dev_path%
-%git_app% remote set-url origin https://github.com/jakub-olszewski/sample-javafx.git
+%git_app% remote set-url origin https://github.com/jakub-olszewski/minecraft-game.git
 %git_app% config credential.helper "" 
 %git_app% status 
 %git_app% add -A
