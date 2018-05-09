@@ -10,7 +10,8 @@ echo Current path: %dev_local%
 echo git path: %git_app%
 echo mvn path: %mvn_app%
 
-cd /d %dev_local%git\github\sample-javafx
+REM cd /d %dev_local%git\github\minecraft-game
+cd /d %dev_path%
 %git_app% reset --hard HEAD
 %git_app% fetch --all
 %git_app% reset --hard origin/master
