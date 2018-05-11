@@ -4,6 +4,7 @@ import eu.b24u.javafx.Aplikacja;
 import eu.b24u.javafx.Plotno;
 import eu.b24u.javafx.Program;
 import eu.b24u.javafx.Scena;
+import eu.b24u.javafx.element.Punkt;
 import eu.b24u.javafx.gra.PamiecGry;
 import eu.b24u.javafx.minecraft.cube.GrassCube;
 import javafx.scene.paint.Color;
@@ -44,12 +45,18 @@ public class MinecraftAplikacja extends Aplikacja {
 		plotno.wypiszTekst(15, 30, 12, "Wygrane:" + pamiecGry.pobierzWygrane(), Color.GREEN);
 		plotno.wypiszTekst(15, 50, 12, "Przegrane:" + pamiecGry.pobierzPrzegrane(), Color.RED);
 
-		new GrassCube(plotno);
+		new GrassCube(plotno, new Punkt(0, 0));
 	}
 
 	@Override
 	public void zdarzeniePrzeciagniecieMyszka(double x, double y, Plotno plotno) {
 		// plotno.rysujPunkt(x, y);
+	}
+
+	@Override
+	public void zdarzenieStrzalkaWGore() {
+		plotno.czysc();
+		new GrassCube(plotno, new Punkt(Program.losujLiczbe(0, 500), Program.losujLiczbe(0, 500)));
 	}
 
 }

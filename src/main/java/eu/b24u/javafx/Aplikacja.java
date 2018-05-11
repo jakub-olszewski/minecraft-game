@@ -1,14 +1,17 @@
 package eu.b24u.javafx;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
- 
+
 public abstract class Aplikacja extends Application {
  
-	private Plotno plotno;
+	protected Plotno plotno;
 
 	@Override
     public void start(Stage primaryStage) {
@@ -25,11 +28,30 @@ public abstract class Aplikacja extends Application {
 		plotno.setOnMouseDragged(event -> {
 			zdarzeniePrzeciagniecieMyszka(event.getX(), event.getY(), plotno);
 		});
+		plotno.setFocusTraversable(true);
+
+		plotno.setOnKeyPressed(new EventHandler<KeyEvent>() {
+
+			@Override
+			public void handle(KeyEvent event) {
+				System.out.println("press key");
+				handleEvent(event);
+			}
+		});
 
 		root.getChildren().add(plotno);
 		scena.get().setScene(new Scene(root));
 		scena.get().show();
     }
+
+	private void handleEvent(KeyEvent event) {
+		if (event.getEventType() == KeyEvent.KEY_PRESSED && event.getCode() == KeyCode.UP) {
+			zdarzenieStrzalkaWGore();
+		}
+
+	}
+
+	public abstract void zdarzenieStrzalkaWGore();
 
 	/**
 	 * Metoda tworzy aplikacje ustawia tytul, rozmiar i zawartosc<br>

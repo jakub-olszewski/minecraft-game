@@ -224,4 +224,10 @@ public class MojaAplikacja extends Aplikacja {
 		// plotno.rysujPunkt(x, y);
 	}
 
+	@Override
+	public void zdarzenieStrzalkaWGore() {
+		// TODO Auto-generated method stub
+
+	}
+
 }

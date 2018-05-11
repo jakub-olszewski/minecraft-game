@@ -6,15 +6,20 @@ import javafx.scene.paint.Color;
 
 public class GrassCube extends Cube {
 
+
 	public GrassCube(Plotno plotno) {
 		super(plotno);
+	}
+
+	public GrassCube(Plotno plotno, Punkt punkt) {
+		super(plotno, punkt);
 	}
 
 	@Override
 	protected void buduj(Plotno plotno) {
 
 		Color kolor = Color.GREEN;
-		Punkt p1 = new Punkt(0, 0);
+		Punkt p1 = wspolrzedne;
 		Punkt p2 = new Punkt(dlugoscBoku, dlugoscBoku);
 		plotno.rysujPelnyProstokat(p1, p2, kolor);
 	}
