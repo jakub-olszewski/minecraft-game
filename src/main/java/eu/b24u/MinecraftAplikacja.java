@@ -5,6 +5,7 @@ import eu.b24u.javafx.Plotno;
 import eu.b24u.javafx.Program;
 import eu.b24u.javafx.Scena;
 import eu.b24u.javafx.gra.PamiecGry;
+import eu.b24u.javafx.minecraft.cube.GrassCube;
 import javafx.scene.paint.Color;
 
 public class MinecraftAplikacja extends Aplikacja {
@@ -25,6 +26,7 @@ public class MinecraftAplikacja extends Aplikacja {
 	public void budujScene(Scena scena, Plotno plotno) {
 		scena.ustawTytul("Minecraft");
 		scena.ustawRozmiar(640, 620);
+		scena.zablokujOkno();
 		plotno.ustawRozmiar(640, 640);
 		pamiecGry = new PamiecGry();
 		utworzNowaPlansze(plotno);
@@ -42,7 +44,7 @@ public class MinecraftAplikacja extends Aplikacja {
 		plotno.wypiszTekst(15, 30, 12, "Wygrane:" + pamiecGry.pobierzWygrane(), Color.GREEN);
 		plotno.wypiszTekst(15, 50, 12, "Przegrane:" + pamiecGry.pobierzPrzegrane(), Color.RED);
 
-
+		new GrassCube(plotno);
 	}
 
 	@Override

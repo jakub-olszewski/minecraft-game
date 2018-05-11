@@ -19,6 +19,13 @@ public class Scena {
 		stage.setWidth(szerokosc);
 	}
 
+	/**
+	 * Blokowanie zmiany wiekosci okna
+	 */
+	public void zablokujOkno() {
+		stage.setResizable(false);
+	}
+
 	public Stage get() {
 		return stage;
 	}
