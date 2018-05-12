@@ -27,3 +27,4 @@ set /p comment="Comment: "
 %git_app% config credential.helper "" 
 
 timeout /T 3
+exit

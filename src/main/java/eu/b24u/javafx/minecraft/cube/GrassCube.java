@@ -17,11 +17,12 @@ public class GrassCube extends Cube {
 
 	@Override
 	protected void buduj(Plotno plotno) {
-
-		Color kolor = Color.GREEN;
-		Punkt p1 = wspolrzedne;
-		Punkt p2 = new Punkt(dlugoscBoku, dlugoscBoku);
-		plotno.rysujPelnyProstokat(p1, p2, kolor);
+		// linijka ponizej zastepuje 4 linijki
+		drawCube(Color.GREEN);
+		// Color kolor = Color.GREEN;
+		// Punkt p1 = wspolrzedne;
+		// Punkt p2 = new Punkt(dlugoscBoku, dlugoscBoku);
+		// plotno.rysujPelnyProstokat(p1, p2, kolor);
 	}
 
 }

@@ -26,3 +26,4 @@ REM Update from github
 %git_app% pull
 
 timeout /T 3
+exit

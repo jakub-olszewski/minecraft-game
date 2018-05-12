@@ -2,11 +2,12 @@ package eu.b24u.javafx.minecraft.cube;
 
 import eu.b24u.javafx.Plotno;
 import eu.b24u.javafx.element.Punkt;
+import javafx.scene.paint.Color;
 
 public abstract class Cube {
 
 	Plotno plotno;
-	protected int dlugoscBoku = 100;
+	protected int dlugoscBoku = 50;
 	protected Punkt wspolrzedne;
 
 	public Cube(Plotno plotno) {
@@ -22,6 +23,12 @@ public abstract class Cube {
 	}
 
 	protected abstract void buduj(Plotno plotno);
+
+	protected void drawCube(Color kolor) {
+		Punkt p1 = wspolrzedne;
+		Punkt p2 = new Punkt(dlugoscBoku, dlugoscBoku);
+		plotno.rysujPelnyProstokat(p1, p2, kolor);
+	}
 
 	public Plotno getPlotno() {
 		return plotno;

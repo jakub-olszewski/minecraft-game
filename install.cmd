@@ -13,10 +13,7 @@ set PATH=%PATH%;%dev_local%java\jdk1.8.0_152
 set JAVA_HOME=%dev_local%java\jdk1.8.0_152
 
 cd /d %~dp0
-REM start "" mvn clean assembly:assembly -DdescriptorId=jar-with-dependencies -source 8
 call mvn clean package install
-timeout /t 3
-REM echo Kopiowanie na pulpit...
-REM copy /y target/Aplikacja.jar %userprofile%\desktop\
-REM taskkill /F /IM cmd.exe
+ 
+timeout /T 3
 exit

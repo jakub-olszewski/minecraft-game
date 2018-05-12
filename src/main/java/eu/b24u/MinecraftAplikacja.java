@@ -7,7 +7,7 @@ import eu.b24u.javafx.Scena;
 import eu.b24u.javafx.element.Punkt;
 import eu.b24u.javafx.gra.PamiecGry;
 import eu.b24u.javafx.minecraft.cube.GrassCube;
-import javafx.scene.paint.Color;
+import eu.b24u.javafx.minecraft.plansza.Plansza1;
 
 public class MinecraftAplikacja extends Aplikacja {
 
@@ -41,11 +41,14 @@ public class MinecraftAplikacja extends Aplikacja {
 	private void utworzNowaPlansze(Plotno plotno) {
 		plotno.czysc();
 
-		pamiecGry.wyczyscKratki();
-		plotno.wypiszTekst(15, 30, 12, "Wygrane:" + pamiecGry.pobierzWygrane(), Color.GREEN);
-		plotno.wypiszTekst(15, 50, 12, "Przegrane:" + pamiecGry.pobierzPrzegrane(), Color.RED);
+		// pamiecGry.wyczyscKratki();
+		// plotno.wypiszTekst(15, 30, 12, "Wygrane:" + pamiecGry.pobierzWygrane(),
+		// Color.GREEN);
+		// plotno.wypiszTekst(15, 50, 12, "Przegrane:" + pamiecGry.pobierzPrzegrane(),
+		// Color.RED);
 
-		new GrassCube(plotno, new Punkt(0, 0));
+		new Plansza1(plotno);
+
 	}
 
 	@Override
