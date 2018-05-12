@@ -1,6 +1,7 @@
 @echo off
 title Run Install
 
+set project=minecraft-game
 set dev_path=%~dp0
 set desktop_path=%userprofile%\desktop\
 set dev_local=%userprofile%\desktop\dev\
@@ -18,12 +19,10 @@ echo desktop_path path: %desktop_path%
 
 title Download from github ...
 cd /d %dev_local%git\github\
-%git_app% clone https://github.com/jakub-olszewski/sample-javafx.git
-cd /d %dev_local%git\github\sample-javafx
+%git_app% clone https://github.com/jakub-olszewski/%project%.git
+cd /d %dev_local%git\github\%project%
 
 REM Update from github
 %git_app% pull
 
-
-pause
-exit
+timeout /T 3

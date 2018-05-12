@@ -1,6 +1,7 @@
 @echo off
 title Git commit 
 
+set project=minecraft-game
 set dev_path=%~dp0
 set dev_local=%userprofile%\desktop\dev\
 set git_app=%dev_local%apps\git\bin\git.exe
@@ -12,7 +13,7 @@ echo git path: %git_app%
 echo mvn path: %mvn_app%
 
 cd /d %dev_path%
-%git_app% remote set-url origin https://github.com/jakub-olszewski/minecraft-game.git
+%git_app% remote set-url origin https://github.com/jakub-olszewski/%project%.git
 %git_app% config credential.helper "" 
 %git_app% status 
 %git_app% add -A
@@ -24,5 +25,5 @@ set /p comment="Comment: "
 %git_app% push -u origin master
 
 %git_app% config credential.helper "" 
-pause
-exit
+
+timeout /T 3

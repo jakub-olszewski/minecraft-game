@@ -15,5 +15,6 @@ cd /d %dev_path%
 %git_app% reset --hard HEAD
 %git_app% fetch --all
 %git_app% reset --hard origin/master
-pause
+
+timeout /T 3
 exit
