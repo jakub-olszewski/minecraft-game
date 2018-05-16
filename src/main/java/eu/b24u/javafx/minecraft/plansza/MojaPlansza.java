@@ -29,7 +29,9 @@ public class MojaPlansza {
 
 		new GrassCube(plotno, new Punkt(300, 250));
 
-
+		new GroundCube(plotno, new Punkt(250, 450));
+		new GroundCube(plotno, new Punkt(200, 450));
+		new GroundCube(plotno, new Punkt(150, 450));
 
 		new StoneCube(plotno, new Punkt(150, 450));
 	}
