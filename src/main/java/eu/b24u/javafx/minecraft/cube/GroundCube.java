@@ -11,6 +11,14 @@ public class GroundCube extends Cube {
 		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * Tworzenie kostki ziemia
+	 * 
+	 * @param plotno
+	 *            na ktorym rysujemy
+	 * @param punkt
+	 *            w ktorym ma byc narysowana kostka ziemi
+	 */
 	public GroundCube(Plotno plotno, Punkt wspolrzedne) {
 		super(plotno, wspolrzedne);
 		// TODO Auto-generated constructor stub

@@ -26,9 +26,9 @@ public class MinecraftAplikacja extends Aplikacja {
 	@Override
 	public void budujScene(Scena scena, Plotno plotno) {
 		scena.ustawTytul("Minecraft");
-		scena.ustawRozmiar(640, 620);
+		scena.ustawRozmiar(630, 600);
 		scena.zablokujOkno();
-		plotno.ustawRozmiar(640, 640);
+		plotno.ustawRozmiar(630, 600);
 		pamiecGry = new PamiecGry();
 		utworzNowaPlansze(plotno);
 	}

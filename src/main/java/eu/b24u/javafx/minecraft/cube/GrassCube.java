@@ -11,6 +11,14 @@ public class GrassCube extends Cube {
 		super(plotno);
 	}
 
+	/**
+	 * Tworzenie kostki trawa
+	 * 
+	 * @param plotno
+	 *            na ktorym rysujemy
+	 * @param punkt
+	 *            w ktorym ma byc narysowana kostka trawy
+	 */
 	public GrassCube(Plotno plotno, Punkt punkt) {
 		super(plotno, punkt);
 	}
