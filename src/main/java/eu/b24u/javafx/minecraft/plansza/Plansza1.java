@@ -4,13 +4,14 @@ import eu.b24u.javafx.element.Punkt;
 import eu.b24u.javafx.minecraft.cube.GrassCube;
 import eu.b24u.javafx.minecraft.cube.GroundCube;
 import eu.b24u.javafx.minecraft.cube.StoneCube;
+import eu.b24u.javafx.minecraft.cube.WaterCube;
 import eu.b24u.javafx.minecraft.engine.Plotno;
 
-public class MojaPlansza {
+public class Plansza1 {
 
 	private Plotno plotno;
 
-	public MojaPlansza(Plotno plotno) {
+	public Plansza1(Plotno plotno) {
 		this.plotno = plotno;
 		buduj(plotno);
 	}
@@ -25,11 +26,17 @@ public class MojaPlansza {
 		new GroundCube(plotno, new Punkt(300, 300));
 		new GrassCube(plotno, new Punkt(50, 0));
 		new GrassCube(plotno, new Punkt(0, 50));
-
+		new WaterCube(plotno, new Punkt(550, 0));
+		new WaterCube(plotno, new Punkt(550, 50));
+		new GroundCube(plotno, new Punkt(300, 350));
+		new GroundCube(plotno, new Punkt(300, 400));
+		new GroundCube(plotno, new Punkt(300, 450));
 
 		new GrassCube(plotno, new Punkt(300, 250));
 
-
+		new GroundCube(plotno, new Punkt(250, 450));
+		new GroundCube(plotno, new Punkt(200, 450));
+		new GroundCube(plotno, new Punkt(150, 450));
 
 		new StoneCube(plotno, new Punkt(150, 450));
 	}
