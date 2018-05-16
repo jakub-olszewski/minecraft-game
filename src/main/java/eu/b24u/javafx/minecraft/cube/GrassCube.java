@@ -1,7 +1,7 @@
 package eu.b24u.javafx.minecraft.cube;
 
-import eu.b24u.javafx.Plotno;
 import eu.b24u.javafx.element.Punkt;
+import eu.b24u.javafx.minecraft.engine.Plotno;
 import javafx.scene.paint.Color;
 
 public class GrassCube extends Cube {

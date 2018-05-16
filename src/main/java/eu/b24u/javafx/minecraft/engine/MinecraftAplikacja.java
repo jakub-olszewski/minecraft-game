@@ -1,9 +1,5 @@
-package eu.b24u;
+package eu.b24u.javafx.minecraft.engine;
 
-import eu.b24u.javafx.Aplikacja;
-import eu.b24u.javafx.Plotno;
-import eu.b24u.javafx.Program;
-import eu.b24u.javafx.Scena;
 import eu.b24u.javafx.element.Punkt;
 import eu.b24u.javafx.gra.PamiecGry;
 import eu.b24u.javafx.minecraft.cube.GrassCube;

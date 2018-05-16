@@ -1,10 +1,10 @@
 package eu.b24u.javafx.minecraft.plansza;
 
-import eu.b24u.javafx.Plotno;
 import eu.b24u.javafx.element.Punkt;
 import eu.b24u.javafx.minecraft.cube.GrassCube;
 import eu.b24u.javafx.minecraft.cube.GroundCube;
 import eu.b24u.javafx.minecraft.cube.WaterCube;
+import eu.b24u.javafx.minecraft.engine.Plotno;
 
 public class Plansza1 {
 

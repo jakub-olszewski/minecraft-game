@@ -1,6 +1,6 @@
-package eu.b24u;
+package eu.b24u.javafx.minecraft.util;
 
-import eu.b24u.javafx.Plotno;
+import eu.b24u.javafx.minecraft.engine.Plotno;
 import javafx.scene.paint.Color;
 
 /**

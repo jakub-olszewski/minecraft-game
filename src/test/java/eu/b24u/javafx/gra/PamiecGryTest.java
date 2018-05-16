@@ -3,8 +3,8 @@ package eu.b24u.javafx.gra;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import eu.b24u.javafx.Program;
 import eu.b24u.javafx.gra.Kratka.Figura;
+import eu.b24u.javafx.minecraft.engine.Program;
 
 /**
  * Wyglad planszy do gry <br>

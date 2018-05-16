@@ -1,5 +1,7 @@
 package eu.b24u;
 
+import eu.b24u.javafx.minecraft.engine.MinecraftAplikacja;
+
 /**
  * 
  */

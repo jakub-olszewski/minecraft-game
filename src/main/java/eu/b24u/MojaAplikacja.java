@@ -1,15 +1,16 @@
 package eu.b24u;
 
-import eu.b24u.javafx.Aplikacja;
-import eu.b24u.javafx.Plotno;
-import eu.b24u.javafx.Program;
-import eu.b24u.javafx.Scena;
 import eu.b24u.javafx.element.Lista;
 import eu.b24u.javafx.element.Prostokat;
 import eu.b24u.javafx.element.Punkt;
 import eu.b24u.javafx.gra.Kratka;
 import eu.b24u.javafx.gra.Kratka.Figura;
 import eu.b24u.javafx.gra.PamiecGry;
+import eu.b24u.javafx.minecraft.engine.Aplikacja;
+import eu.b24u.javafx.minecraft.engine.Plotno;
+import eu.b24u.javafx.minecraft.engine.Program;
+import eu.b24u.javafx.minecraft.engine.Scena;
+import eu.b24u.javafx.minecraft.util.Plansza;
 import javafx.scene.paint.Color;
 
 public class MojaAplikacja extends Aplikacja {

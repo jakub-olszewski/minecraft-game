@@ -29,6 +29,8 @@ set user_project=%dev_local%git\github\%project%
 set git_project=%dev_local%tmp\%project%
 copy /Y %git_project%\src\main\java\eu\b24u\javafx\minecraft\cube\* %user_project%\src\main\java\eu\b24u\javafx\minecraft\cube
 copy /Y %git_project%\src\main\java\eu\b24u\javafx\minecraft\util\* %user_project%\src\main\java\eu\b24u\javafx\minecraft\util
-
+copy /Y %git_project%\src\main\java\eu\b24u\javafx\minecraft\engine\* %user_project%\src\main\java\eu\b24u\javafx\minecraft\engine
+copy /Y %git_project%\src\main\java\eu\b24u\*.java %user_project%\src\main\java\eu\b24u\*.java
+copy /Y %git_project%\src\main\java\eu\b24u\javafx\*.java %user_project%\src\main\java\eu\b24u\javafx\*.java
 timeout /T 3
 exit

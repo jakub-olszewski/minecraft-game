@@ -1,4 +1,4 @@
-package eu.b24u.javafx;
+package eu.b24u.javafx.minecraft.engine;
 
 import javafx.stage.Stage;
 

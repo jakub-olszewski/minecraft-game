@@ -2,9 +2,9 @@ package eu.b24u.javafx.gra;
 
 import java.util.Iterator;
 
-import eu.b24u.javafx.Program;
 import eu.b24u.javafx.element.Lista;
 import eu.b24u.javafx.gra.Kratka.Figura;
+import eu.b24u.javafx.minecraft.engine.Program;
 
 public class PamiecGry implements InterfejsPamiecGry {
 

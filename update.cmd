@@ -11,11 +11,23 @@ echo Current path: %dev_local%
 echo git path: %git_app%
 echo mvn path: %mvn_app%
 
+mkdir %dev_local%tmp
+cd /d %dev_local%tmp
+rm /Y *
+rmdir /Y *
+copy /Y 
+set user_project=%dev_local%git\github\%project%
+set git_project=%dev_local%tmp\%project%
+
+copy /Y %user_project%\src\main\java\eu\b24u\javafx\minecraft\plansza\* %git_project%\src\main\java\eu\b24u\javafx\minecraft\plansza
+
 cd /d %dev_local%git\github\%project%
 
 %git_app% reset --hard HEAD
 %git_app% fetch --all
 %git_app% reset --hard origin/master
+
+copy /Y %git_project%\src\main\java\eu\b24u\javafx\minecraft\plansza\* %user_project%\src\main\java\eu\b24u\javafx\minecraft\plansza
 
 timeout /T 3
 exit
