@@ -3,14 +3,15 @@ package eu.b24u.javafx.minecraft.plansza;
 import eu.b24u.javafx.element.Punkt;
 import eu.b24u.javafx.minecraft.cube.GrassCube;
 import eu.b24u.javafx.minecraft.cube.GroundCube;
+import eu.b24u.javafx.minecraft.cube.StoneCube;
 import eu.b24u.javafx.minecraft.cube.WaterCube;
 import eu.b24u.javafx.minecraft.engine.Plotno;
 
-public class Plansza1 {
+public class MojaPlansza {
 
 	private Plotno plotno;
 
-	public Plansza1(Plotno plotno) {
+	public MojaPlansza(Plotno plotno) {
 		this.plotno = plotno;
 		buduj(plotno);
 	}
@@ -37,7 +38,7 @@ public class Plansza1 {
 		new GroundCube(plotno, new Punkt(200, 450));
 		new GroundCube(plotno, new Punkt(150, 450));
 
-
+		new StoneCube(plotno, new Punkt(150, 450));
 	}
 
 }

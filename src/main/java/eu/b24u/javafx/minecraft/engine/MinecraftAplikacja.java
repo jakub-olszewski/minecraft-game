@@ -3,7 +3,7 @@ package eu.b24u.javafx.minecraft.engine;
 import eu.b24u.javafx.element.Punkt;
 import eu.b24u.javafx.gra.PamiecGry;
 import eu.b24u.javafx.minecraft.cube.GrassCube;
-import eu.b24u.javafx.minecraft.plansza.Plansza1;
+import eu.b24u.javafx.minecraft.engine.example.Plansza1;
 
 public class MinecraftAplikacja extends Aplikacja {
 
