@@ -2,6 +2,7 @@
 title Git update
 
 set project=minecraft-game
+set dev_path=%~dp0
 set dev_local=%userprofile%\desktop\dev\
 set git_app=%dev_local%apps\git\bin\git.exe
 set mvn_app=%dev_local%apps\apache-maven-3.5.2\bin\mvn
@@ -11,11 +12,8 @@ echo Current path: %dev_local%
 echo git path: %git_app%
 echo mvn path: %mvn_app%
 
-cd /d %dev_local%git\github\%project%
+copy /Y %dev_path%* %dev_local%git\github\%project%
 
-%git_app% reset --hard HEAD
-%git_app% fetch --all
-%git_app% reset --hard origin/master
 
 timeout /T 3
 exit

@@ -19,6 +19,7 @@ echo desktop_path path: %desktop_path%
 
 title Download from github ...
 cd /d %dev_local%git\github\
+rmdir /Q /S %project%
 %git_app% clone https://github.com/jakub-olszewski/%project%.git
 cd /d %dev_local%git\github\%project%
 
