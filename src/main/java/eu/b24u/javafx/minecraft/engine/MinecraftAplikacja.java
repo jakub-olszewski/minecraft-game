@@ -3,7 +3,7 @@ package eu.b24u.javafx.minecraft.engine;
 import eu.b24u.javafx.element.Punkt;
 import eu.b24u.javafx.gra.PamiecGry;
 import eu.b24u.javafx.minecraft.cube.GrassCube;
-import eu.b24u.javafx.minecraft.plansza.MojaPlansza;
+import eu.b24u.javafx.minecraft.engine.example.Plansza1;
 
 public class MinecraftAplikacja extends Aplikacja {
 
@@ -43,7 +43,7 @@ public class MinecraftAplikacja extends Aplikacja {
 		// plotno.wypiszTekst(15, 50, 12, "Przegrane:" + pamiecGry.pobierzPrzegrane(),
 		// Color.RED);
 
-		new MojaPlansza(plotno);
+		new Plansza1(plotno);
 
 	}
 

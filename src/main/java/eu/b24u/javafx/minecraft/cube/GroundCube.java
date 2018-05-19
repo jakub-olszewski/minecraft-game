@@ -26,11 +26,7 @@ public class GroundCube extends Cube {
 
 	@Override
 	protected void buduj(Plotno plotno) {
-		// TODO Auto-generated method stub
-		Color kolor = Color.BROWN;
-		Punkt p1 = wspolrzedne;
-		Punkt p2 = new Punkt(dlugoscBoku, dlugoscBoku);
-		plotno.rysujPelnyProstokat(p1, p2, kolor);
+		drawCube(Color.BROWN);
 	}
 
 }

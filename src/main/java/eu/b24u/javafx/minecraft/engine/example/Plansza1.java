@@ -1,11 +1,14 @@
 package eu.b24u.javafx.minecraft.engine.example;
 
+import eu.b24u.javafx.element.Lista;
 import eu.b24u.javafx.element.Punkt;
 import eu.b24u.javafx.minecraft.cube.GrassCube;
 import eu.b24u.javafx.minecraft.cube.GroundCube;
 import eu.b24u.javafx.minecraft.cube.StoneCube;
 import eu.b24u.javafx.minecraft.cube.WaterCube;
 import eu.b24u.javafx.minecraft.engine.Plotno;
+import eu.b24u.javafx.minecraft.util.CubeUtil;
+import eu.b24u.javafx.minecraft.util.CubeUtil.CubeType;
 
 public class Plansza1 {
 
@@ -22,6 +25,13 @@ public class Plansza1 {
 				new GrassCube(plotno, new Punkt(x, y));
 			}
 		}
+
+		Lista<GroundCube> sciezka = new Lista<>();
+		sciezka.dodaj(new GroundCube(plotno, new Punkt(300, 300)));
+
+		CubeUtil util = new CubeUtil(plotno);
+		util.rysujLiniePionowo(50, 400, 100, CubeType.GROUND);
+
 		new GrassCube(plotno, new Punkt(0, 0));
 		new GroundCube(plotno, new Punkt(300, 300));
 		new GrassCube(plotno, new Punkt(50, 0));
@@ -40,5 +50,6 @@ public class Plansza1 {
 
 		new StoneCube(plotno, new Punkt(150, 450));
 	}
+
 
 }
