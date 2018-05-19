@@ -3,6 +3,8 @@ package eu.b24u.javafx.minecraft.util;
 import eu.b24u.javafx.element.Punkt;
 import eu.b24u.javafx.minecraft.cube.GrassCube;
 import eu.b24u.javafx.minecraft.cube.GroundCube;
+import eu.b24u.javafx.minecraft.cube.StoneCube;
+import eu.b24u.javafx.minecraft.cube.WaterCube;
 import eu.b24u.javafx.minecraft.engine.Plotno;
 
 /**
@@ -14,7 +16,7 @@ import eu.b24u.javafx.minecraft.engine.Plotno;
 public class CubeUtil {
 
 	public enum CubeType {
-		GROUND
+		GROUND, WATER, STONE, GRASS
 	};
 
 	private Plotno plotno;
@@ -50,6 +52,15 @@ public class CubeUtil {
 		switch (kostka) {
 		case GROUND:
 			new GroundCube(plotno, new Punkt(x, y));
+			break;
+		case WATER:
+			new WaterCube(plotno, new Punkt(x, y));
+			break;
+		case STONE:
+			new StoneCube(plotno, new Punkt(x, y));
+			break;
+		case GRASS:
+			new GrassCube(plotno, new Punkt(x, y));
 			break;
 		default:
 			new GrassCube(plotno, new Punkt(x, y));
