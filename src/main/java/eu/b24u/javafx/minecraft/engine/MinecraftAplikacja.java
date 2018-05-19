@@ -2,7 +2,6 @@ package eu.b24u.javafx.minecraft.engine;
 
 import eu.b24u.javafx.element.Punkt;
 import eu.b24u.javafx.gra.PamiecGry;
-import eu.b24u.javafx.minecraft.cube.GrassCube;
 import eu.b24u.javafx.minecraft.engine.example.Plansza1;
 
 public class MinecraftAplikacja extends Aplikacja {
@@ -54,8 +53,8 @@ public class MinecraftAplikacja extends Aplikacja {
 
 	@Override
 	public void zdarzenieStrzalkaWGore() {
-		plotno.czysc();
-		new GrassCube(plotno, new Punkt(Program.losujLiczbe(0, 500), Program.losujLiczbe(0, 500)));
+		utworzNowaPlansze(plotno);
+		new Steve(plotno, new Punkt(Program.losujLiczbe(0, 500), Program.losujLiczbe(0, 500)));
 	}
 
 }

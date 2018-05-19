@@ -30,6 +30,7 @@ public abstract class Cube {
 		plotno.rysujPelnyProstokat(p1, p2, kolor);
 	}
 
+
 	public Plotno getPlotno() {
 		return plotno;
 	}
