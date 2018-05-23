@@ -2,6 +2,7 @@ package eu.b24u.javafx.minecraft.engine;
 
 import eu.b24u.javafx.element.Punkt;
 import eu.b24u.javafx.gra.PamiecGry;
+import eu.b24u.javafx.gra.PamiecGryImpl;
 import eu.b24u.javafx.minecraft.engine.example.Plansza1;
 
 public class MinecraftAplikacja extends Aplikacja {
@@ -24,7 +25,8 @@ public class MinecraftAplikacja extends Aplikacja {
 		scena.ustawRozmiar(630, 600);
 		scena.zablokujOkno();
 		plotno.ustawRozmiar(630, 600);
-		pamiecGry = new PamiecGry();
+		pamiecGry = new PamiecGryImpl();
+		pamiecGry.stworzSteve();
 		utworzNowaPlansze(plotno);
 	}
 
