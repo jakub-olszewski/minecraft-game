@@ -231,4 +231,22 @@ public class MojaAplikacja extends Aplikacja {
 
 	}
 
+	@Override
+	public void zdarzenieStrzalkaWDol() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void zdarzenieStrzalkaWLewo() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void zdarzenieStrzalkaWPrawo() {
+		// TODO Auto-generated method stub
+
+	}
+
 }

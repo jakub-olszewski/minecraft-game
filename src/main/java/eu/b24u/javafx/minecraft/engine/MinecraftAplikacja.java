@@ -57,4 +57,22 @@ public class MinecraftAplikacja extends Aplikacja {
 		new Steve(plotno, new Punkt(Program.losujLiczbe(0, 500), Program.losujLiczbe(0, 500)));
 	}
 
+	@Override
+	public void zdarzenieStrzalkaWDol() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void zdarzenieStrzalkaWLewo() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void zdarzenieStrzalkaWPrawo() {
+		// TODO Auto-generated method stub
+
+	}
+
 }

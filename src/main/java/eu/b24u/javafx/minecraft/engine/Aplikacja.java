@@ -48,8 +48,22 @@ public abstract class Aplikacja extends Application {
 		if (event.getEventType() == KeyEvent.KEY_PRESSED && event.getCode() == KeyCode.UP) {
 			zdarzenieStrzalkaWGore();
 		}
-
+		if (event.getEventType() == KeyEvent.KEY_PRESSED && event.getCode() == KeyCode.DOWN) {
+			zdarzenieStrzalkaWDol();
+		}
+		if (event.getEventType() == KeyEvent.KEY_PRESSED && event.getCode() == KeyCode.LEFT) {
+			zdarzenieStrzalkaWLewo();
+		}
+		if (event.getEventType() == KeyEvent.KEY_PRESSED && event.getCode() == KeyCode.RIGHT) {
+			zdarzenieStrzalkaWPrawo();
+		}
 	}
+
+	public abstract void zdarzenieStrzalkaWDol();
+
+	public abstract void zdarzenieStrzalkaWLewo();
+
+	public abstract void zdarzenieStrzalkaWPrawo();
 
 	public abstract void zdarzenieStrzalkaWGore();
 
