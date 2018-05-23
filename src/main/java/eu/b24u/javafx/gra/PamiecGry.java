@@ -15,4 +15,10 @@ public interface PamiecGry {
 	void rysujSteve();
 
 	void przesunSteveDoGory();
+
+	void przesunSteveWDol();
+
+	void przesunSteveWLewo();
+
+	void przesunSteveWPrawo();
 }

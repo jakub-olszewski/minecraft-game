@@ -33,6 +33,25 @@ public class PamiecGryImpl implements PamiecGry {
 	public void rysujSteve() {
 		steve = new Steve(plotno, steve.getWspolrzedne());
 	}
+
+	@Override
+	public void przesunSteveWDol() {
+		steve.przesunWDol();
+
+
+	}
+
+	@Override
+	public void przesunSteveWLewo() {
+		steve.przesunWLewo();
+
+	}
+
+	@Override
+	public void przesunSteveWPrawo() {
+		steve.przesunWPrawo();
+
+	}
 	
 
 }

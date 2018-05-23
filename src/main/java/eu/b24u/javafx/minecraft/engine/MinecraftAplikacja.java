@@ -65,19 +65,25 @@ public class MinecraftAplikacja extends Aplikacja {
 
 	@Override
 	public void zdarzenieStrzalkaWDol() {
-		// TODO Auto-generated method stub
+		utworzNowaPlansze(plotno);
+		pamiecGry.przesunSteveWDol();
+		pamiecGry.rysujSteve();
 
 	}
 
 	@Override
 	public void zdarzenieStrzalkaWLewo() {
-		// TODO Auto-generated method stub
+		utworzNowaPlansze(plotno);
+		pamiecGry.przesunSteveWLewo();
+		pamiecGry.rysujSteve();
 
 	}
 
 	@Override
 	public void zdarzenieStrzalkaWPrawo() {
-		// TODO Auto-generated method stub
+		utworzNowaPlansze(plotno);
+		pamiecGry.przesunSteveWPrawo();
+		pamiecGry.rysujSteve();
 
 	}
 

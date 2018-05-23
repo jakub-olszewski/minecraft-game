@@ -4,7 +4,7 @@ public interface Ruch {
 
 	public void przesunDoGory();
 
-	public void przesunDoDolu();
+	public void przesunWDol();
 
 	public void przesunWLewo();
 

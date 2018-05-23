@@ -23,24 +23,24 @@ public class Steve extends Cube implements Ruch {
 
 	@Override
 	public void przesunDoGory() {
-		wspolrzedne.y -= 50;
+		wspolrzedne.y -= 5;
 	}
 
 	@Override
-	public void przesunDoDolu() {
-		// TODO Auto-generated method stub
+	public void przesunWDol() {
+		wspolrzedne.y += 5;
 
 	}
 
 	@Override
 	public void przesunWLewo() {
-		// TODO Auto-generated method stub
+		wspolrzedne.x -= 5;
 
 	}
 
 	@Override
 	public void przesunWPrawo() {
-		// TODO Auto-generated method stub
+		wspolrzedne.x += 5;
 
 	}
 
