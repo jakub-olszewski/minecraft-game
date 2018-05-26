@@ -1,5 +1,7 @@
 package eu.b24u.javafx.gra;
 
+import java.util.List;
+
 import eu.b24u.javafx.element.Punkt;
 
 /**
@@ -32,4 +34,6 @@ public interface PamiecGry {
 	 * Metoda dzieki ktorej steve kopie
 	 */
 	void niechSteveKopie();
+
+	List<Punkt> pobierzMiejscaWykopane();
 }

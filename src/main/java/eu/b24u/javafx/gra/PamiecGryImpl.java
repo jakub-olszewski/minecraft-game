@@ -1,7 +1,9 @@
 package eu.b24u.javafx.gra;
 
+import java.util.List;
+
+import eu.b24u.javafx.element.Lista;
 import eu.b24u.javafx.element.Punkt;
-import eu.b24u.javafx.minecraft.cube.GroundCube;
 import eu.b24u.javafx.minecraft.engine.Plotno;
 import eu.b24u.javafx.minecraft.engine.Program;
 import eu.b24u.javafx.minecraft.engine.Steve;
@@ -10,9 +12,11 @@ public class PamiecGryImpl implements PamiecGry {
 
 	Steve steve;
 	private Plotno plotno;
+	List<Punkt> wykopaneMiejsca;
 
 	public PamiecGryImpl(Plotno plotno) {
 		this.plotno = plotno;
+		this.wykopaneMiejsca = new Lista<>();
 	}
 
 	@Override
@@ -66,8 +70,18 @@ public class PamiecGryImpl implements PamiecGry {
 
 	@Override
 	public void niechSteveKopie() {
-		// tutaj trzeba napisac potrzebny kod
-		new GroundCube(plotno, steve.getWspolrzedne());
+		int x = steve.getWspolrzedne().x;
+		int y = steve.getWspolrzedne().y;
+
+		wykopaneMiejsca.add(new Punkt(x, y));// dodaje wspolrzedne do miejsc wykopanych
+		// new GroundCube(plotno, steve.getWspolrzedne());
+	}
+
+	@Override
+	public List<Punkt> pobierzMiejscaWykopane() {
+		// return - zwroc
+		// metoda zwraca wykopane miejsca
+		return wykopaneMiejsca;
 	}
 	
 

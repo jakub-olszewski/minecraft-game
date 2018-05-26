@@ -30,6 +30,14 @@ public class Plansza1 {
 			}
 		}
 
+		// petla for - tak ja petla w scratch
+		for (Punkt miejsceWykopane : pamiecGry.pobierzMiejscaWykopane()) {
+			// w tym miejscu jest rysowanie ziemi dla kazdego
+			// miejsca wykopanego
+			// i zapisanego w miejscach wykopanych w pamieci gry
+			new GroundCube(plotno, miejsceWykopane);
+		}
+
 		Lista<GroundCube> sciezka = new Lista<>();
 		sciezka.dodaj(new GroundCube(plotno, new Punkt(300, 300)));
 
