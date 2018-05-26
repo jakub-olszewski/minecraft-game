@@ -84,6 +84,13 @@ public class MinecraftAplikacja extends Aplikacja {
 		utworzNowaPlansze(plotno);
 		pamiecGry.przesunSteveWPrawo();
 		pamiecGry.rysujSteve();
+	}
+
+	@Override
+	public void zdarzenieNaKlikniecieWSpacje() {
+		utworzNowaPlansze(plotno);// tworzenie planszy od nowa
+		pamiecGry.niechSteveKopie(); // kopanie w miejscu gdzie jest obecnie steve
+		pamiecGry.rysujSteve();// rysowanie steve
 
 	}
 

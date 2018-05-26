@@ -1,6 +1,7 @@
 package eu.b24u.javafx.gra;
 
 import eu.b24u.javafx.element.Punkt;
+import eu.b24u.javafx.minecraft.cube.GroundCube;
 import eu.b24u.javafx.minecraft.engine.Plotno;
 import eu.b24u.javafx.minecraft.engine.Program;
 import eu.b24u.javafx.minecraft.engine.Steve;
@@ -55,14 +56,18 @@ public class PamiecGryImpl implements PamiecGry {
 
 	@Override
 	public int pobierzPunkty() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public Punkt pobierzLokalizacjeSteve() {
-		// TODO Auto-generated method stub
 		return steve.getWspolrzedne();
+	}
+
+	@Override
+	public void niechSteveKopie() {
+		// tutaj trzeba napisac potrzebny kod
+		new GroundCube(plotno, steve.getWspolrzedne());
 	}
 	
 

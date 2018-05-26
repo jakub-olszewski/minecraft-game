@@ -57,6 +57,9 @@ public abstract class Aplikacja extends Application {
 		if (event.getEventType() == KeyEvent.KEY_PRESSED && event.getCode() == KeyCode.RIGHT) {
 			zdarzenieStrzalkaWPrawo();
 		}
+		if (event.getEventType() == KeyEvent.KEY_PRESSED && event.getCode() == KeyCode.SPACE) {
+			zdarzenieNaKlikniecieWSpacje();
+		}
 	}
 
 	public abstract void zdarzenieStrzalkaWDol();
@@ -66,6 +69,11 @@ public abstract class Aplikacja extends Application {
 	public abstract void zdarzenieStrzalkaWPrawo();
 
 	public abstract void zdarzenieStrzalkaWGore();
+
+	/**
+	 * Zdarzenie na klikniecie spacja
+	 */
+	public abstract void zdarzenieNaKlikniecieWSpacje();
 
 	/**
 	 * Metoda tworzy aplikacje ustawia tytul, rozmiar i zawartosc<br>

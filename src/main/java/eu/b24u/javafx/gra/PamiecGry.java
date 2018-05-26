@@ -27,4 +27,9 @@ public interface PamiecGry {
 	int pobierzPunkty();
 
 	Punkt pobierzLokalizacjeSteve();
+
+	/**
+	 * Metoda dzieki ktorej steve kopie
+	 */
+	void niechSteveKopie();
 }
