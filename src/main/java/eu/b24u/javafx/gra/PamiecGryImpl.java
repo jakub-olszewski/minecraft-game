@@ -72,7 +72,6 @@ public class PamiecGryImpl implements PamiecGry {
 	public void niechSteveKopie() {
 		int x = steve.getWspolrzedne().x;
 		int y = steve.getWspolrzedne().y;
-
 		wykopaneMiejsca.add(new Punkt(x, y));// dodaje wspolrzedne do miejsc wykopanych
 		// new GroundCube(plotno, steve.getWspolrzedne());
 	}
