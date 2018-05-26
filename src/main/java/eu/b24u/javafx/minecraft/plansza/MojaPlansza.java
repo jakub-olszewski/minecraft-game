@@ -1,17 +1,21 @@
 package eu.b24u.javafx.minecraft.plansza;
 
 import eu.b24u.javafx.element.Punkt;
+import eu.b24u.javafx.gra.PamiecGry;
 import eu.b24u.javafx.minecraft.cube.GrassCube;
 import eu.b24u.javafx.minecraft.cube.GroundCube;
 import eu.b24u.javafx.minecraft.cube.StoneCube;
 import eu.b24u.javafx.minecraft.engine.Plotno;
+import javafx.scene.paint.Color;
 
 public class MojaPlansza {
 
 	private Plotno plotno;
+	private PamiecGry pamiecGry;
 
-	public MojaPlansza(Plotno plotno) {
+	public MojaPlansza(Plotno plotno, PamiecGry pamiecGry) {
 		this.plotno = plotno;
+		this.pamiecGry = pamiecGry;
 		buduj(plotno);
 	}
 
@@ -34,6 +38,9 @@ public class MojaPlansza {
 		new GroundCube(plotno, new Punkt(150, 450));
 
 		new StoneCube(plotno, new Punkt(150, 450));
+
+		plotno.wypiszTekst(15, 30, 12, "Punkty:" + pamiecGry.pobierzPunkty(), Color.WHITE);
+
 	}
 
 }

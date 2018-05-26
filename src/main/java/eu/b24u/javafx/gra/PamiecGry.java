@@ -1,5 +1,7 @@
 package eu.b24u.javafx.gra;
 
+import eu.b24u.javafx.element.Punkt;
+
 /**
  * 
  * @author student
@@ -21,4 +23,8 @@ public interface PamiecGry {
 	void przesunSteveWLewo();
 
 	void przesunSteveWPrawo();
+
+	int pobierzPunkty();
+
+	Punkt pobierzLokalizacjeSteve();
 }

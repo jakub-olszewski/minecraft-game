@@ -39,12 +39,12 @@ public class MinecraftAplikacja extends Aplikacja {
 		plotno.czysc();
 
 		// pamiecGry.wyczyscKratki();
-		// plotno.wypiszTekst(15, 30, 12, "Wygrane:" + pamiecGry.pobierzWygrane(),
-		// Color.GREEN);
-		// plotno.wypiszTekst(15, 50, 12, "Przegrane:" + pamiecGry.pobierzPrzegrane(),
+		// plotno.wypiszTekst(15, 30, 200, "Punkty:" + pamiecGry.pobierzWygrane(),
+		// Color.WHITE);
 		// Color.RED);
+		new Plansza1(plotno, pamiecGry);
 
-		new Plansza1(plotno);
+		// new MojaPlansza(plotno, pamiecGry);
 
 	}
 

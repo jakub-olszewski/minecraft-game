@@ -2,18 +2,28 @@ package eu.b24u.javafx.minecraft.cube;
 
 import eu.b24u.javafx.element.Punkt;
 import eu.b24u.javafx.minecraft.engine.Plotno;
+import eu.b24u.javafx.minecraft.util.CubeUtil;
 import javafx.scene.paint.Color;
 
 public abstract class Cube {
 
 	Plotno plotno;
-	protected int dlugoscBoku = 50;
+	public static int dlugoscBoku = 50;
 	protected Punkt wspolrzedne;
 
 	public Cube(Plotno plotno) {
 		setPlotno(plotno);
 		buduj(plotno);
 		wspolrzedne = new Punkt(0, 0);
+	}
+
+	/**
+	 * Metoda sprawdza czy kostka zawiera punkt
+	 * @param punkt ktory jest sprawdzany
+	 * @return prawda lub falsz
+	 */
+	public boolean czyZawiera(Punkt punkt) {
+		return new CubeUtil(plotno).czyKostkaZawiera(this, punkt);
 	}
 
 	public Cube(Plotno plotno, Punkt wspolrzedne) {

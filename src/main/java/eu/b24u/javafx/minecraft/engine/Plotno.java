@@ -103,4 +103,5 @@ public class Plotno extends Canvas {
 		context.fillRect(x, y, 1, 1);
 	}
 
+
 }

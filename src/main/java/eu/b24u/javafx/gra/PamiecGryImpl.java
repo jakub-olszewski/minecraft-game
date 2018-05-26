@@ -52,6 +52,18 @@ public class PamiecGryImpl implements PamiecGry {
 		steve.przesunWPrawo();
 
 	}
+
+	@Override
+	public int pobierzPunkty() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Punkt pobierzLokalizacjeSteve() {
+		// TODO Auto-generated method stub
+		return steve.getWspolrzedne();
+	}
 	
 
 }

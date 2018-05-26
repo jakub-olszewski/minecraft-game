@@ -1,6 +1,9 @@
 package eu.b24u.javafx.minecraft.util;
 
+import java.awt.Rectangle;
+
 import eu.b24u.javafx.element.Punkt;
+import eu.b24u.javafx.minecraft.cube.Cube;
 import eu.b24u.javafx.minecraft.cube.GrassCube;
 import eu.b24u.javafx.minecraft.cube.GroundCube;
 import eu.b24u.javafx.minecraft.cube.StoneCube;
@@ -26,16 +29,22 @@ public class CubeUtil {
 	}
 
 	/**
+	 * Metoda sprawdza czy kostka zawiera punkt
+	 * @param punkt ktory jest sprawdzany
+	 * @return prawda lub falsz
+	 */
+	public boolean czyKostkaZawiera(Cube kostka, Punkt punkt) {
+		Rectangle rect = new Rectangle(kostka.getWspolrzedne().x, kostka.getWspolrzedne().y, Cube.dlugoscBoku, Cube.dlugoscBoku);
+		return rect.contains(punkt);
+	}
+
+	/**
 	 * Metoda rysuje linie kostek pionowo
 	 * 
-	 * @param odIluY
-	 *            wspolrzedna pionowa od ktorej zaczynamy rysowac
-	 * @param doIluY
-	 *            wspolrzedna pionowa do ktorej rysujemy
-	 * @param x
-	 *            wspolrzedna pozioma rysowanej linii
-	 * @param kostka
-	 *            typ kostki ktora rysujemy
+	 * @param odIluY wspolrzedna pionowa od ktorej zaczynamy rysowac
+	 * @param doIluY wspolrzedna pionowa do ktorej rysujemy
+	 * @param x wspolrzedna pozioma rysowanej linii
+	 * @param kostka typ kostki ktora rysujemy
 	 */
 	public void rysujLiniePionowo(int odIluY, int doIluY, int x, CubeType kostka) {
 		/**
