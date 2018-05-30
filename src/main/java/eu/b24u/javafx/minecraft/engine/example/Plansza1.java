@@ -6,6 +6,7 @@ import eu.b24u.javafx.gra.PamiecGry;
 import eu.b24u.javafx.minecraft.cube.GrassCube;
 import eu.b24u.javafx.minecraft.cube.GroundCube;
 import eu.b24u.javafx.minecraft.cube.StoneCube;
+import eu.b24u.javafx.minecraft.cube.TreeCube;
 import eu.b24u.javafx.minecraft.cube.WaterCube;
 import eu.b24u.javafx.minecraft.engine.Plotno;
 import eu.b24u.javafx.minecraft.util.CubeUtil;
@@ -63,6 +64,8 @@ public class Plansza1 {
 		new StoneCube(plotno, new Punkt(150, 450));
 
 		plotno.wypiszTekst(15, 30, 12, "Punkty:" + pamiecGry.pobierzPunkty(), Color.WHITE);
+
+		new TreeCube(plotno, new Punkt(450, 450));
 
 	}
 

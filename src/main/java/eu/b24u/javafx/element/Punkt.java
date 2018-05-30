@@ -8,4 +8,10 @@ public class Punkt extends Point {
 		super(x, y);
 	}
 
+	public Punkt przesun(int i, int j) {
+		int nowyX = x + i;
+		int nowyY = y + j;
+		return new Punkt(nowyX, nowyY);
+	}
+
 }

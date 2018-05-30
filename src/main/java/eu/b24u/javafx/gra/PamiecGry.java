@@ -36,4 +36,10 @@ public interface PamiecGry {
 	void niechSteveKopie();
 
 	List<Punkt> pobierzMiejscaWykopane();
+
+	boolean czyIstniejeZapisGry();
+
+	void wczytaj();
+
+	void zapisz();
 }

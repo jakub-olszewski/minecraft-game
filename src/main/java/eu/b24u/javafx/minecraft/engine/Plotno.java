@@ -75,6 +75,22 @@ public class Plotno extends Canvas {
 	}
 
 	/**
+	 * Metoda rysuje wypelniony prostokat
+	 * 
+	 * @param punktRysowania
+	 *            miejsce rozpoczecia rysowania
+	 * @param wysokosc
+	 *            prostokata
+	 * @param szerokosc
+	 *            prostokata
+	 * @param kolor
+	 *            wypelnienia prostokata
+	 */
+	public void rysujPelnyProstokat(Punkt punktRysowania, int wysokosc, int szerokosc, Color kolor) {
+		rysujPelnyProstokat(punktRysowania, new Punkt(szerokosc, wysokosc), kolor);
+	}
+
+	/**
 	 * jest to metoda ktora wypisuje tekst na plotnie
 	 * 
 	 * @param x
