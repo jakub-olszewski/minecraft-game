@@ -26,7 +26,9 @@ public class TreeCube extends Cube {
 		// rysujemy prostokat o kolorze BROWN
 		// w punkcie pienPunkt o wymiarach
 		// szerokosci 5 i wysokosci 30
-		plotno.rysujPelnyProstokat(pienPunkt, 30, 5, Color.BROWN);
+		// kolor rgb
+		// https://www.w3schools.com/colors/colors_rgb.asp
+		plotno.rysujPelnyProstokat(pienPunkt, 30, 10, Color.rgb(85, 0, 0));
 
 		// rysujemy prostokat o kolorze DARKGREEN
 		// w punkcie koronaPunkt o wymiarach

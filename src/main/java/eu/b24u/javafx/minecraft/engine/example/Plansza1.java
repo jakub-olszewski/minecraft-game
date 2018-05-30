@@ -65,7 +65,9 @@ public class Plansza1 {
 
 		plotno.wypiszTekst(15, 30, 12, "Punkty:" + pamiecGry.pobierzPunkty(), Color.WHITE);
 
-		new TreeCube(plotno, new Punkt(450, 450));
+		new TreeCube(plotno, new Punkt(350, 450));
+		new TreeCube(plotno, new Punkt(420, 470));
+		new TreeCube(plotno, new Punkt(410, 380));
 
 	}
 

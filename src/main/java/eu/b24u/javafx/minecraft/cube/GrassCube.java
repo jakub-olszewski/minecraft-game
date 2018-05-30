@@ -27,10 +27,29 @@ public class GrassCube extends Cube {
 	protected void buduj(Plotno plotno) {
 		// linijka ponizej zastepuje 4 linijki
 		drawCube(Color.GREEN);
-		// Color kolor = Color.GREEN;
-		// Punkt p1 = wspolrzedne;
-		// Punkt p2 = new Punkt(dlugoscBoku, dlugoscBoku);
-		// plotno.rysujPelnyProstokat(p1, p2, kolor);
+
+		Punkt rysowania = getWspolrzedne();
+
+		int wielkoscTrawy = 2;
+
+		Punkt trawa = rysowania.przesun(10, 10);
+		Color kolorMlodejTrawy = Color.rgb(103, 173, 0);
+
+		// https://www.w3schools.com/colors/colors_rgb.asp
+		plotno.rysujPelnyProstokat(trawa, wielkoscTrawy * 2, 1, kolorMlodejTrawy);
+
+		wielkoscTrawy = 3;
+
+		Punkt trawa2 = rysowania.przesun(25, 25);
+		// https://www.w3schools.com/colors/colors_rgb.asp
+		plotno.rysujPelnyProstokat(trawa2, wielkoscTrawy * 2, 1, kolorMlodejTrawy);
+
+		wielkoscTrawy = 2;
+		
+		Punkt trawa3 = rysowania.przesun(40, 40);
+		// https://www.w3schools.com/colors/colors_rgb.asp
+		plotno.rysujPelnyProstokat(trawa3, wielkoscTrawy * 2, 1, kolorMlodejTrawy);
+
 	}
 
 }
