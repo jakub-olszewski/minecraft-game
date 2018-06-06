@@ -5,6 +5,7 @@ import eu.b24u.javafx.element.Punkt;
 import eu.b24u.javafx.gra.PamiecGry;
 import eu.b24u.javafx.minecraft.cube.GrassCube;
 import eu.b24u.javafx.minecraft.cube.GroundCube;
+import eu.b24u.javafx.minecraft.cube.MushroomCube;
 import eu.b24u.javafx.minecraft.cube.StoneCube;
 import eu.b24u.javafx.minecraft.cube.TreeCube;
 import eu.b24u.javafx.minecraft.cube.WaterCube;
@@ -39,6 +40,11 @@ public class Plansza1 {
 			new GroundCube(plotno, miejsceWykopane);
 		}
 
+		for (Punkt miejsceMushroom : pamiecGry.pobierzMushrooms()) {
+			new MushroomCube(plotno, miejsceMushroom);
+		}
+
+
 		Lista<GroundCube> sciezka = new Lista<>();
 		sciezka.dodaj(new GroundCube(plotno, new Punkt(300, 300)));
 
@@ -69,6 +75,7 @@ public class Plansza1 {
 		new TreeCube(plotno, new Punkt(420, 470));
 		new TreeCube(plotno, new Punkt(410, 380));
 
+		// new MushroomCube(plotno, new Punkt(0, 0));
 	}
 
 

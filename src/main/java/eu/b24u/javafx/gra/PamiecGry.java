@@ -42,4 +42,11 @@ public interface PamiecGry {
 	void wczytaj();
 
 	void zapisz();
+
+	/**
+	 * Pobieramy liste grzybkow
+	 * 
+	 * @return mushroom list
+	 */
+	List<Punkt> pobierzMushrooms();
 }

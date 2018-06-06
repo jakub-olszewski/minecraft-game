@@ -19,12 +19,18 @@ public class PamiecGryImpl implements PamiecGry {
 	Steve steve;
 	private Plotno plotno;
 	List<Punkt> wykopaneMiejsca;
+	List<Punkt> listaMushrooms;
 	String fileName = "pamiecGry.ser";
 	Plansza plansza;
 
 	public PamiecGryImpl(Plotno plotno) {
 		this.plotno = plotno;
+		// tworzenie listy miejsc wykopanych
 		this.wykopaneMiejsca = new Lista<>();
+		// tworzenie listy grzybkow
+		this.listaMushrooms = new Lista<>();
+		// dodanie grzybka do listy
+		listaMushrooms.add(new Punkt(200, 300));
 	}
 
 	@Override
@@ -127,6 +133,11 @@ public class PamiecGryImpl implements PamiecGry {
 	@Override
 	public boolean czyIstniejeZapisGry() {
 		return new File(fileName).exists();
+	}
+
+	@Override
+	public List<Punkt> pobierzMushrooms() {
+		return listaMushrooms;
 	}
 
 }
