@@ -39,8 +39,8 @@ public class PamiecGryImpl implements PamiecGry {
 		this.listaMushrooms = new Lista<>();
 		// dodanie grzybka do listy
 
-		// TODO zadanie stworz 5 grzybkow w losowych miejscach
-		for (int i = 1; i < 20; i++) {
+		// TODO zadanie stworz 50 grzybkow w losowych miejscach
+		for (int i = 1; i < 50; i++) {
 			int y = Program.losujLiczbe(0, 600);
 			int x = Program.losujLiczbe(0, 600);
 			listaMushrooms.add(new Punkt(x, y));
