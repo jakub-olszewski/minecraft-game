@@ -17,6 +17,5 @@ cls
 cd /d %~dp0
 call mvn exec:java -Dexec.mainClass="eu.b24u.Main"
 
-timeout /T 3
 goto start
 exit

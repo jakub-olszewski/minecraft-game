@@ -49,4 +49,8 @@ public interface PamiecGry {
 	 * @return mushroom list
 	 */
 	List<Punkt> pobierzMushrooms();
+
+	void zbierzMushroom();
+
+	int pobierzKroki();
 }

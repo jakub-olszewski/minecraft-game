@@ -84,6 +84,7 @@ public class MinecraftAplikacja extends Aplikacja {
 		utworzNowaPlansze(plotno);
 		pamiecGry.przesunSteveWPrawo();
 		pamiecGry.rysujSteve();
+		pamiecGry.zbierzMushroom();
 	}
 
 	@Override

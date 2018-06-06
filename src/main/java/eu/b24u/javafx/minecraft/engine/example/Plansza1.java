@@ -70,6 +70,7 @@ public class Plansza1 {
 		new StoneCube(plotno, new Punkt(150, 450));
 
 		plotno.wypiszTekst(15, 30, 12, "Punkty:" + pamiecGry.pobierzPunkty(), Color.WHITE);
+		plotno.wypiszTekst(15, 50, 12, "Kroki:" + pamiecGry.pobierzKroki(), Color.WHITE);
 
 		new TreeCube(plotno, new Punkt(350, 450));
 		new TreeCube(plotno, new Punkt(420, 470));

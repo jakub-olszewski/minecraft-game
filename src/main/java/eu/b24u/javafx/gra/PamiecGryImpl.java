@@ -22,15 +22,29 @@ public class PamiecGryImpl implements PamiecGry {
 	List<Punkt> listaMushrooms;
 	String fileName = "pamiecGry.ser";
 	Plansza plansza;
+	int iloscPunktow;
+	int iloscKrokow;
 
 	public PamiecGryImpl(Plotno plotno) {
 		this.plotno = plotno;
 		// tworzenie listy miejsc wykopanych
 		this.wykopaneMiejsca = new Lista<>();
 		// tworzenie listy grzybkow
+		utworzListeMushrooms();
+		iloscPunktow = 0;
+		iloscKrokow = 0;
+	}
+
+	public void utworzListeMushrooms() {
 		this.listaMushrooms = new Lista<>();
 		// dodanie grzybka do listy
-		listaMushrooms.add(new Punkt(200, 300));
+
+		// TODO zadanie stworz 5 grzybkow w losowych miejscach
+		for (int i = 1; i < 20; i++) {
+			int y = Program.losujLiczbe(0, 600);
+			int x = Program.losujLiczbe(0, 600);
+			listaMushrooms.add(new Punkt(x, y));
+		}
 	}
 
 	@Override
@@ -46,6 +60,7 @@ public class PamiecGryImpl implements PamiecGry {
 	@Override
 	public void przesunSteveDoGory() {
 		steve.przesunDoGory();
+		iloscKrokow += 1;
 	}
 
 	@Override
@@ -56,25 +71,27 @@ public class PamiecGryImpl implements PamiecGry {
 	@Override
 	public void przesunSteveWDol() {
 		steve.przesunWDol();
-
+		iloscKrokow += 1;
 
 	}
 
 	@Override
 	public void przesunSteveWLewo() {
 		steve.przesunWLewo();
+		iloscKrokow += 1;
 
 	}
 
 	@Override
 	public void przesunSteveWPrawo() {
 		steve.przesunWPrawo();
+		iloscKrokow += 1;
 
 	}
 
 	@Override
 	public int pobierzPunkty() {
-		return 0;
+		return iloscPunktow;
 	}
 
 	@Override
@@ -96,7 +113,7 @@ public class PamiecGryImpl implements PamiecGry {
 		// metoda zwraca wykopane miejsca
 		return wykopaneMiejsca;
 	}
-	
+
 	@Override
 	public void zapisz() {
 
@@ -138,6 +155,22 @@ public class PamiecGryImpl implements PamiecGry {
 	@Override
 	public List<Punkt> pobierzMushrooms() {
 		return listaMushrooms;
+	}
+
+	@Override
+	public void zbierzMushroom() {
+		for (Punkt mushroomPunkt : listaMushrooms) {
+			if (steve.czyZawiera(mushroomPunkt)) {
+				listaMushrooms.remove(mushroomPunkt);
+				iloscPunktow += 1;
+			}
+		}
+	}
+
+	@Override
+	public int pobierzKroki() {
+		// TODO Auto-generated method stub
+		return iloscKrokow;
 	}
 
 }
