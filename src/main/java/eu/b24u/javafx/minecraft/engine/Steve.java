@@ -13,15 +13,15 @@ public class Steve extends Cube implements Ruch {
 	@Override
 	protected void buduj(Plotno plotno) {
 		Punkt rysowania = getWspolrzedne();
-		Punkt glowa = rysowania.przesun(25, 10);
+		Punkt glowa = rysowania.przesun(20, -5);
 
 		plotno.rysujPelnyProstokat(glowa, new Punkt(20, 20), Color.ROSYBROWN);
 		// pien jest przesuniety od punktu rysowania
 		// o 25 na x
 		// o 10 na y
-		Punkt tulow = rysowania.przesun(25, 10);
+		Punkt tulow = rysowania.przesun(25, 15);
 
-		plotno.rysujPelnyProstokat(tulow, new Punkt(10, 30), Color.BLUE);
+		plotno.rysujPelnyProstokat(tulow, new Punkt(10, 25), Color.BLUE);
 		// Punkt p1 = wspolrzedne;
 		// Punkt p2 = new Punkt(10, 30);
 		// plotno.rysujPelnyProstokat(p1, p2, Color.BLUE);
