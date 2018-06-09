@@ -24,6 +24,7 @@ public class PamiecGryImpl implements PamiecGry {
 	Plansza plansza;
 	int iloscPunktow;
 	int iloscKrokow;
+	private List<Punkt> listaPunktowSniegu;
 
 	public PamiecGryImpl(Plotno plotno) {
 		this.plotno = plotno;
@@ -31,8 +32,15 @@ public class PamiecGryImpl implements PamiecGry {
 		this.wykopaneMiejsca = new Lista<>();
 		// tworzenie listy grzybkow
 		utworzListeMushrooms();
+		utworzListePunktowSniegu();
 		iloscPunktow = 0;
 		iloscKrokow = 0;
+	}
+
+	private void utworzListePunktowSniegu() {
+		this.listaPunktowSniegu = new Lista<>();
+		// TODO Auto-generated method stub
+
 	}
 
 	public void utworzListeMushrooms() {
@@ -181,6 +189,12 @@ public class PamiecGryImpl implements PamiecGry {
 	public int pobierzKroki() {
 		// TODO Auto-generated method stub
 		return iloscKrokow;
+	}
+
+	@Override
+	public List<Punkt> pobierzPunktySniegu() {
+		// TODO Auto-generated method stub
+		return listaPunktowSniegu;
 	}
 
 }

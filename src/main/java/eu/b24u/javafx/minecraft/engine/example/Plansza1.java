@@ -6,10 +6,12 @@ import eu.b24u.javafx.gra.PamiecGry;
 import eu.b24u.javafx.minecraft.cube.GrassCube;
 import eu.b24u.javafx.minecraft.cube.GroundCube;
 import eu.b24u.javafx.minecraft.cube.MushroomCube;
+import eu.b24u.javafx.minecraft.cube.SnowCube;
 import eu.b24u.javafx.minecraft.cube.StoneCube;
 import eu.b24u.javafx.minecraft.cube.TreeCube;
 import eu.b24u.javafx.minecraft.cube.WaterCube;
 import eu.b24u.javafx.minecraft.engine.Plotno;
+import eu.b24u.javafx.minecraft.engine.Program;
 import eu.b24u.javafx.minecraft.util.CubeUtil;
 import eu.b24u.javafx.minecraft.util.CubeUtil.CubeType;
 import javafx.scene.paint.Color;
@@ -18,6 +20,7 @@ public class Plansza1 {
 
 	private Plotno plotno;
 	private PamiecGry pamiecGry;
+
 
 	public Plansza1(Plotno plotno, PamiecGry pamiecGry) {
 		this.plotno = plotno;
@@ -44,6 +47,9 @@ public class Plansza1 {
 			new MushroomCube(plotno, miejsceMushroom);
 		}
 
+		for (Punkt miejsceSniegu : pamiecGry.pobierzPunktySniegu()) {
+			new SnowCube(plotno, miejsceSniegu);
+		}
 
 		Lista<GroundCube> sciezka = new Lista<>();
 		sciezka.dodaj(new GroundCube(plotno, new Punkt(300, 300)));
@@ -76,9 +82,15 @@ public class Plansza1 {
 		new TreeCube(plotno, new Punkt(420, 470));
 		new TreeCube(plotno, new Punkt(410, 380));
 
-		// new MushroomCube(plotno, new Punkt(0, 0));
+		// % reszta z dzielenie
+		if (pamiecGry.pobierzKroki() % 50 == 0) {
+			int x = Program.losujLiczbe(1, 500);
+			int y = Program.losujLiczbe(1, 800);
+			Punkt snowPunkt = new Punkt(x, y);// punkt w ktorym rysujemy kostke sniegu
+			// rysowanie kostki sniegu
+			pamiecGry.pobierzPunktySniegu().add(snowPunkt);
+			// new MushroomCube(plotno, new Punkt(0, 0));
+		}
 	}
-
-
 
 }

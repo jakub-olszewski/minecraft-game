@@ -53,4 +53,6 @@ public interface PamiecGry {
 	void zbierzMushroom();
 
 	int pobierzKroki();
+
+	List<Punkt> pobierzPunktySniegu();
 }
