@@ -159,12 +159,22 @@ public class PamiecGryImpl implements PamiecGry {
 
 	@Override
 	public void zbierzMushroom() {
+
 		for (Punkt mushroomPunkt : listaMushrooms) {
 			if (steve.czyZawiera(mushroomPunkt)) {
-				listaMushrooms.remove(mushroomPunkt);
 				iloscPunktow += 1;
 			}
 		}
+		listaMushrooms.removeIf(mushroomPunkt -> steve.czyZawiera(mushroomPunkt));
+
+		// nie mozna usuwac elementow listy w petli mozna uzyc dodatkowej zmiennej a
+		// potem usunac podliste
+		// for (Punkt mushroomPunkt : listaMushrooms) {
+		// if (steve.czyZawiera(mushroomPunkt)) {
+		// listaMushrooms.remove(mushroomPunkt);
+		// iloscPunktow += 1;
+		// }
+		// }
 	}
 
 	@Override

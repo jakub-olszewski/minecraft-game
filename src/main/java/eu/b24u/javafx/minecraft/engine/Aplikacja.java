@@ -1,5 +1,7 @@
 package eu.b24u.javafx.minecraft.engine;
 
+import java.util.logging.Logger;
+
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
@@ -9,9 +11,12 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
+
 public abstract class Aplikacja extends Application {
  
 	protected Plotno plotno;
+	private Logger log = Logger.getLogger(getClass().getName());
+
 
 	@Override
     public void start(Stage primaryStage) {
@@ -34,7 +39,7 @@ public abstract class Aplikacja extends Application {
 
 			@Override
 			public void handle(KeyEvent event) {
-				System.out.println("press key");
+				log.info("press key " + event);
 				handleEvent(event);
 			}
 		});

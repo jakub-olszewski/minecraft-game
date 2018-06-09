@@ -58,6 +58,8 @@ public class MinecraftAplikacja extends Aplikacja {
 		utworzNowaPlansze(plotno);
 		pamiecGry.przesunSteveDoGory();
 		pamiecGry.rysujSteve();
+		pamiecGry.zbierzMushroom();
+
 
 		// new Steve(plotno, new Punkt(Program.losujLiczbe(0, 500),
 		// Program.losujLiczbe(0, 500)));
@@ -68,6 +70,7 @@ public class MinecraftAplikacja extends Aplikacja {
 		utworzNowaPlansze(plotno);
 		pamiecGry.przesunSteveWDol();
 		pamiecGry.rysujSteve();
+		pamiecGry.zbierzMushroom();
 
 	}
 
@@ -76,6 +79,7 @@ public class MinecraftAplikacja extends Aplikacja {
 		utworzNowaPlansze(plotno);
 		pamiecGry.przesunSteveWLewo();
 		pamiecGry.rysujSteve();
+		pamiecGry.zbierzMushroom();
 
 	}
 

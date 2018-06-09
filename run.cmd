@@ -13,7 +13,7 @@ set PATH=%PATH%;%dev_local%java\jdk1.8.0_152
 set JAVA_HOME=%dev_local%java\jdk1.8.0_152
 
 cd /d %~dp0
-call mvn exec:java -Dexec.mainClass="eu.b24u.Main"
+call mvn exec:java -Dmaven.surefire.debug -Dexec.mainClass="eu.b24u.Main"
 
 timeout /T 3
 exit
