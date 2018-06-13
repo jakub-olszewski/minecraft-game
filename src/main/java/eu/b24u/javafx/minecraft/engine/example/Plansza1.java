@@ -47,9 +47,10 @@ public class Plansza1 {
 			new MushroomCube(plotno, miejsceMushroom);
 		}
 
-		for (Punkt miejsceSniegu : pamiecGry.pobierzPunktySniegu()) {
-			new SnowCube(plotno, miejsceSniegu);
+		for (Punkt miejsceTree : pamiecGry.pobierzTrees()) {
+			new TreeCube(plotno, miejsceTree);
 		}
+
 
 		Lista<GroundCube> sciezka = new Lista<>();
 		sciezka.dodaj(new GroundCube(plotno, new Punkt(300, 300)));
@@ -81,6 +82,12 @@ public class Plansza1 {
 		new TreeCube(plotno, new Punkt(350, 450));
 		new TreeCube(plotno, new Punkt(420, 470));
 		new TreeCube(plotno, new Punkt(410, 380));
+		new TreeCube(plotno, new Punkt(460, 420));
+		new TreeCube(plotno, new Punkt(490, 350));
+		new TreeCube(plotno, new Punkt(390, 320));
+		new GroundCube(plotno, new Punkt(100, 450));
+		new GroundCube(plotno, new Punkt(150, 450));
+		new GroundCube(plotno, new Punkt(100, 400));
 
 		// % reszta z dzielenie
 		if (pamiecGry.pobierzKroki() % 50 == 0) {
@@ -91,6 +98,10 @@ public class Plansza1 {
 			pamiecGry.pobierzPunktySniegu().add(snowPunkt);
 			// new MushroomCube(plotno, new Punkt(0, 0));
 		}
+		for (Punkt miejsceSniegu : pamiecGry.pobierzPunktySniegu()) {
+			new SnowCube(plotno, miejsceSniegu);
+		}
+
 	}
 
 }

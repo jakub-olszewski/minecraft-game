@@ -4,6 +4,13 @@ import eu.b24u.javafx.gra.PamiecGry;
 import eu.b24u.javafx.gra.PamiecGryImpl;
 import eu.b24u.javafx.minecraft.engine.example.Plansza1;
 
+/**
+ * Jest to klasa, czyli zbior metod i pol ktore moge byc zmiennymi lub innych
+ * klas, obiektow
+ * 
+ * @author student
+ *
+ */
 public class MinecraftAplikacja extends Aplikacja {
 
 	private PamiecGry pamiecGry;
@@ -16,7 +23,8 @@ public class MinecraftAplikacja extends Aplikacja {
 
 	/**
 	 * Budowanie okna aplikacji po uruchomieniu<br>
-	 * metoda wykonuje sie tylko raz!
+	 * metoda wykonuje sie tylko raz! W tej metodzie tworzyone jest okno i ustawiany
+	 * jest jego rozmiar
 	 */
 	@Override
 	public void budujScene(Scena scena, Plotno plotno) {

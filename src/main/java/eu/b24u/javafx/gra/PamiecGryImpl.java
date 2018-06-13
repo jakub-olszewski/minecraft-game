@@ -20,6 +20,7 @@ public class PamiecGryImpl implements PamiecGry {
 	private Plotno plotno;
 	List<Punkt> wykopaneMiejsca;
 	List<Punkt> listaMushrooms;
+	List<Punkt> listaTrees;
 	String fileName = "pamiecGry.ser";
 	Plansza plansza;
 	int iloscPunktow;
@@ -32,9 +33,22 @@ public class PamiecGryImpl implements PamiecGry {
 		this.wykopaneMiejsca = new Lista<>();
 		// tworzenie listy grzybkow
 		utworzListeMushrooms();
+		utworzListeTrees();
 		utworzListePunktowSniegu();
 		iloscPunktow = 0;
 		iloscKrokow = 0;
+	}
+
+	/**
+	 * tworzy liste wylosowanych punktów w którzych będą narysowane drzewa
+	 */
+	private void utworzListeTrees() {
+		this.listaTrees = new Lista<>();
+		for (int i = 1; i < 15; i++) {
+			int y = Program.losujLiczbe(0, 600);
+			int x = Program.losujLiczbe(0, 600);
+			listaTrees.add(new Punkt(x, y));
+		}
 	}
 
 	private void utworzListePunktowSniegu() {
@@ -195,6 +209,11 @@ public class PamiecGryImpl implements PamiecGry {
 	public List<Punkt> pobierzPunktySniegu() {
 		// TODO Auto-generated method stub
 		return listaPunktowSniegu;
+	}
+
+	@Override
+	public List<Punkt> pobierzTrees() {
+		return listaTrees;
 	}
 
 }

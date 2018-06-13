@@ -4,6 +4,12 @@ import eu.b24u.javafx.element.Punkt;
 import eu.b24u.javafx.minecraft.engine.Plotno;
 import javafx.scene.paint.Color;
 
+/**
+ * Klasa odpowiedzialna za rysowanie drzewa :#
+ * 
+ * @author student
+ *
+ */
 public class TreeCube extends Cube {
 
 	public TreeCube(Plotno plotno, Punkt wspolrzedne) {

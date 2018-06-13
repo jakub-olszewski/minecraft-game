@@ -32,6 +32,12 @@ public abstract class Cube {
 		buduj(plotno);
 	}
 
+	/**
+	 * Odpowiedzialna za budowanie/tworzenie obiektu na plótnie
+	 * 
+	 * @param plotno
+	 *            znajdujące się w grze
+	 */
 	protected abstract void buduj(Plotno plotno);
 
 	protected void drawCube(Color kolor) {

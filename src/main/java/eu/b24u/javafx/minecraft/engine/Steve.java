@@ -31,7 +31,9 @@ public class Steve extends Cube implements Ruch {
 		// plotno.rysujPelnyProstokat(p3, p4, Color.ROSYBROWN);
 	}
 
-
+	/**
+	 * Przesuwa steve do góry o 5 pikseli
+	 */
 	@Override
 	public void przesunDoGory() {
 		wspolrzedne.y -= 5;
