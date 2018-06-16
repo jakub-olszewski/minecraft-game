@@ -4,6 +4,12 @@ import eu.b24u.javafx.element.Punkt;
 import eu.b24u.javafx.minecraft.cube.Cube;
 import javafx.scene.paint.Color;
 
+/**
+ * jest to klasa odpowiedzialna za rysowanie i ruchy steva
+ * 
+ * @author student
+ *
+ */
 public class Steve extends Cube implements Ruch {
 
 	public Steve(Plotno plotno, Punkt wspolrzedne) {

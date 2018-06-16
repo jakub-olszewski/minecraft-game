@@ -16,13 +16,13 @@ import eu.b24u.javafx.minecraft.util.CubeUtil;
 import eu.b24u.javafx.minecraft.util.CubeUtil.CubeType;
 import javafx.scene.paint.Color;
 
-public class Plansza1 {
+public class AktywnaPlansza {
 
 	private Plotno plotno;
 	private PamiecGry pamiecGry;
 
 
-	public Plansza1(Plotno plotno, PamiecGry pamiecGry) {
+	public AktywnaPlansza(Plotno plotno, PamiecGry pamiecGry) {
 		this.plotno = plotno;
 		this.pamiecGry = pamiecGry;
 		buduj(plotno);
@@ -47,9 +47,7 @@ public class Plansza1 {
 			new MushroomCube(plotno, miejsceMushroom);
 		}
 
-		for (Punkt miejsceTree : pamiecGry.pobierzTrees()) {
-			new TreeCube(plotno, miejsceTree);
-		}
+
 
 
 		Lista<GroundCube> sciezka = new Lista<>();
@@ -101,7 +99,10 @@ public class Plansza1 {
 		for (Punkt miejsceSniegu : pamiecGry.pobierzPunktySniegu()) {
 			new SnowCube(plotno, miejsceSniegu);
 		}
-
+		for (Punkt miejsceTree : pamiecGry.pobierzTrees()) {
+			new TreeCube(plotno, miejsceTree);
+		}
+		
 	}
 
 }

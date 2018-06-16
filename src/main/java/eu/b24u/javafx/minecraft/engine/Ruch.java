@@ -1,7 +1,9 @@
 package eu.b24u.javafx.minecraft.engine;
 
 /**
- * To jest interfejs odpowiadający za ruch :)
+ * To jest interfejs odpowiadający za ruch :) Interfejs to zbior metod, ktore
+ * mozna zaimplementowac (zapisac sposob wykonania). Interfej mozna
+ * zaimplementowac na wiele sposobow.
  * 
  * @author student
  *

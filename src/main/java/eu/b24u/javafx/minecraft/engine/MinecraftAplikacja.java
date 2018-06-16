@@ -2,7 +2,7 @@ package eu.b24u.javafx.minecraft.engine;
 
 import eu.b24u.javafx.gra.PamiecGry;
 import eu.b24u.javafx.gra.PamiecGryImpl;
-import eu.b24u.javafx.minecraft.engine.example.Plansza1;
+import eu.b24u.javafx.minecraft.engine.example.AktywnaPlansza;
 
 /**
  * Jest to klasa, czyli zbior metod i pol ktore moge byc zmiennymi lub innych
@@ -28,7 +28,7 @@ public class MinecraftAplikacja extends Aplikacja {
 	 */
 	@Override
 	public void budujScene(Scena scena, Plotno plotno) {
-		scena.ustawTytul("Minecraft");
+		scena.ustawTytul("Minecraft (Lernversion)");
 		scena.ustawRozmiar(630, 600);
 		scena.zablokujOkno();
 		plotno.ustawRozmiar(630, 600);
@@ -50,7 +50,7 @@ public class MinecraftAplikacja extends Aplikacja {
 		// plotno.wypiszTekst(15, 30, 200, "Punkty:" + pamiecGry.pobierzWygrane(),
 		// Color.WHITE);
 		// Color.RED);
-		new Plansza1(plotno, pamiecGry);
+		new AktywnaPlansza(plotno, pamiecGry);
 
 		// new MojaPlansza(plotno, pamiecGry);
 
