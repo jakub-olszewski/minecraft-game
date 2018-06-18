@@ -19,7 +19,10 @@ public class SnowCube extends Cube {
 
 	@Override
 	protected void buduj(Plotno plotno) {
-		drawCube(Color.WHITE);
+		Punkt p1 = wspolrzedne;
+		int dlugoscBoku = 4;
+		Punkt p2 = new Punkt(dlugoscBoku, dlugoscBoku);
+		plotno.rysujPelnyProstokat(p1, p2, Color.WHITE);
 	}
 
 }

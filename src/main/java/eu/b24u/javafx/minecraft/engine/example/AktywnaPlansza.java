@@ -56,17 +56,20 @@ public class AktywnaPlansza {
 		CubeUtil util = new CubeUtil(plotno);
 		util.rysujLiniePionowo(50, 400, 100, CubeType.GROUND);
 
-		new GrassCube(plotno, new Punkt(0, 0));
-		new GroundCube(plotno, new Punkt(300, 300));
-		new GrassCube(plotno, new Punkt(50, 0));
-		new GrassCube(plotno, new Punkt(0, 50));
-		new WaterCube(plotno, new Punkt(550, 0));
+		util.rysujLiniePionowo(50, 400, 400, CubeType.WATER);
+		// new GrassCube(plotno, new Punkt(0, 0));
+		// new GroundCube(plotno, new Punkt(300, 300));
+		// new GrassCube(plotno, new Punkt(50, 0));
+		// new GrassCube(plotno, new Punkt(0, 50));
 		new WaterCube(plotno, new Punkt(550, 50));
+		new WaterCube(plotno, new Punkt(50, 0));
 		new GroundCube(plotno, new Punkt(300, 350));
 		new GroundCube(plotno, new Punkt(300, 400));
 		new GroundCube(plotno, new Punkt(300, 450));
+		new WaterCube(plotno, new Punkt(50, 600));
 
-		new GrassCube(plotno, new Punkt(300, 250));
+		;
+		// new GrassCube(plotno, new Punkt(300, 250));
 
 		new GroundCube(plotno, new Punkt(250, 450));
 		new GroundCube(plotno, new Punkt(200, 450));
@@ -74,8 +77,8 @@ public class AktywnaPlansza {
 
 		new StoneCube(plotno, new Punkt(150, 450));
 
-		plotno.wypiszTekst(15, 30, 16, "Punkty:" + pamiecGry.pobierzPunkty(), Color.WHITE);
-		plotno.wypiszTekst(15, 50, 16, "Kroki:" + pamiecGry.pobierzKroki(), Color.WHITE);
+		plotno.wypiszTekst(15, 50, 16, "Punkty:" + pamiecGry.pobierzPunkty(), Color.WHITE);
+		plotno.wypiszTekst(15, 70, 16, "Kroki:" + pamiecGry.pobierzKroki(), Color.WHITE);
 
 		new TreeCube(plotno, new Punkt(350, 450));
 		new TreeCube(plotno, new Punkt(420, 470));

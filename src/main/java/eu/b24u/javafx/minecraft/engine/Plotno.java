@@ -97,6 +97,8 @@ public class Plotno extends Canvas {
 	 *            to wspolrzedna pozioma
 	 * @param y
 	 *            to wspolrzedna pionowa
+	 * @param rozmiar
+	 *            rozmiar czcionki
 	 * @param tekst
 	 *            to napis wypisany na plotnie
 	 * @param kolor
