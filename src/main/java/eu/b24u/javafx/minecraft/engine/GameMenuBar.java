@@ -37,21 +37,14 @@ public class GameMenuBar extends MenuBar {
 		});
 		addSubMenu("Load", menuGame, null);
 		addSubMenu("Save", menuGame, null);
-		addSubMenu("Wypłać 100 zł", menuGame, null);
 		// MenuItem newMenu = new MenuItem("New");
 		// menuGame.getItems().add(newMenu);
 
-		// MenuItem itemEffect = new MenuItem("Load");
-		// menuFile.getItems().add(itemEffect);
-		// MenuItem itemEffect2 = new MenuItem("Save");
-		// menuFile.getItems().add(itemEffect2);
-		// --- Menu Connect
-		Menu menuEdit = new Menu("Connect");
-
 		// --- Menu Server
-		Menu menuView = new Menu("Server");
-
-		getMenus().addAll(menuGame, menuEdit, menuView);
+		Menu menuServer = new Menu("Server");
+		addSubMenu("Connect", menuServer, null);
+		addSubMenu("Create", menuServer, null);
+		getMenus().addAll(menuGame, menuServer);
 		setMinWidth(600);
 		// menu end
 	}

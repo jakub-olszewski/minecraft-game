@@ -27,8 +27,17 @@ public class PamiecGryImpl implements PamiecGry {
 	int iloscKrokow;
 	private List<Punkt> listaPunktowSniegu;
 
+	/**
+	 * Konstruktor pamieci gry, tworzy nowa pamiec gry
+	 * 
+	 * @param plotno
+	 */
 	public PamiecGryImpl(Plotno plotno) {
 		this.plotno = plotno;
+		init();
+	}
+
+	public void init() {
 		// tworzenie listy miejsc wykopanych
 		this.wykopaneMiejsca = new Lista<>();
 		// tworzenie listy grzybkow
@@ -218,8 +227,7 @@ public class PamiecGryImpl implements PamiecGry {
 
 	@Override
 	public void reset() {
-		// TODO Auto-generated method stub
-
+		init();
 	}
 
 }
