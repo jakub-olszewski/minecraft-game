@@ -6,9 +6,6 @@ import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -26,25 +23,6 @@ public abstract class Aplikacja extends Application {
 		Scena scena = new Scena(primaryStage);
 		Image image = new Image(getClass().getResourceAsStream("/icon.png"));
 
-		MenuBar menuBar = new MenuBar();
-
-		// --- Menu File
-		Menu menuFile = new Menu("Game");
-
-		MenuItem itemEffect3 = new MenuItem("New");
-		menuFile.getItems().add(itemEffect3);
-		MenuItem itemEffect = new MenuItem("Load");
-		menuFile.getItems().add(itemEffect);
-		MenuItem itemEffect2 = new MenuItem("Save");
-		menuFile.getItems().add(itemEffect2);
-		// --- Menu Edit
-		Menu menuEdit = new Menu("Connect");
-
-		// --- Menu View
-		Menu menuView = new Menu("Server");
-
-		menuBar.getMenus().addAll(menuFile, menuEdit, menuView);
-		menuBar.setMinWidth(600);
 
 		scena.get().getIcons().add(image);
 		budujScene(scena, plotno);
@@ -67,12 +45,14 @@ public abstract class Aplikacja extends Application {
 		});
 
 		root.getChildren().add(plotno);
-		root.getChildren().add(menuBar);
+
+		root.getChildren().add(budujMenu());// add menu bar
 
 		scena.get().setScene(new Scene(root));
 		scena.get().show();
     }
 
+	public abstract GameMenuBar budujMenu();
 	private void handleEvent(KeyEvent event) {
 		if (event.getEventType() == KeyEvent.KEY_PRESSED && event.getCode() == KeyCode.UP) {
 			zdarzenieStrzalkaWGore();

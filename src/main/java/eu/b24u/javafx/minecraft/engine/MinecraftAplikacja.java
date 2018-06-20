@@ -45,11 +45,6 @@ public class MinecraftAplikacja extends Aplikacja {
 	 */
 	private void utworzNowaPlansze(Plotno plotno) {
 		plotno.czysc();
-
-		// pamiecGry.wyczyscKratki();
-		// plotno.wypiszTekst(15, 30, 200, "Punkty:" + pamiecGry.pobierzWygrane(),
-		// Color.WHITE);
-		// Color.RED);
 		new AktywnaPlansza(plotno, pamiecGry);
 
 		// new MojaPlansza(plotno, pamiecGry);
@@ -105,6 +100,13 @@ public class MinecraftAplikacja extends Aplikacja {
 		pamiecGry.niechSteveKopie(); // kopanie w miejscu gdzie jest obecnie steve
 		pamiecGry.rysujSteve();// rysowanie steve
 
+	}
+
+	@Override
+	public GameMenuBar budujMenu() {
+		// GameMenuBar menuBar = new GameMenuBar(plotno,pamiecGry);
+		GameMenuBar menuBar = new GameMenuBar(plotno);
+		return menuBar;
 	}
 
 }
