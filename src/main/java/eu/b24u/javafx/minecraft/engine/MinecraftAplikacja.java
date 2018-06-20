@@ -104,8 +104,7 @@ public class MinecraftAplikacja extends Aplikacja {
 
 	@Override
 	public GameMenuBar budujMenu() {
-		// GameMenuBar menuBar = new GameMenuBar(plotno,pamiecGry);
-		GameMenuBar menuBar = new GameMenuBar(plotno);
+		GameMenuBar menuBar = new GameMenuBar(plotno, pamiecGry);
 		return menuBar;
 	}
 

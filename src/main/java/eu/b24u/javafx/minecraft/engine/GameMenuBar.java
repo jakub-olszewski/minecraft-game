@@ -2,7 +2,7 @@ package eu.b24u.javafx.minecraft.engine;
 
 import java.awt.HeadlessException;
 
-import eu.b24u.javafx.gra.PamiecGryImpl;
+import eu.b24u.javafx.gra.PamiecGry;
 import eu.b24u.javafx.minecraft.engine.example.AktywnaPlansza;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -25,14 +25,15 @@ public class GameMenuBar extends MenuBar {
 		mainMenu.getItems().add(subMenu);
 	}
 
-	public GameMenuBar(Plotno plotno) throws HeadlessException {
+	public GameMenuBar(Plotno plotno, PamiecGry pamiecGry) throws HeadlessException {
 		super();
 
 		Menu menuGame = new Menu("Game");
 
 		addSubMenu("New", menuGame, action -> {
 			plotno.czysc();
-			new AktywnaPlansza(plotno, new PamiecGryImpl(plotno));
+			pamiecGry.reset();
+			new AktywnaPlansza(plotno, pamiecGry);
 		});
 		addSubMenu("Load", menuGame, null);
 		addSubMenu("Save", menuGame, null);

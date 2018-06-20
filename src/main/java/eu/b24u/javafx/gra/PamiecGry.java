@@ -57,4 +57,6 @@ public interface PamiecGry {
 	int pobierzKroki();
 
 	List<Punkt> pobierzPunktySniegu();
+
+	void reset();
 }

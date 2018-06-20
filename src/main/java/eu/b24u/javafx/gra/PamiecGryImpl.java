@@ -216,4 +216,10 @@ public class PamiecGryImpl implements PamiecGry {
 		return listaTrees;
 	}
 
+	@Override
+	public void reset() {
+		// TODO Auto-generated method stub
+
+	}
+
 }
